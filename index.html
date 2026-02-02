@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mido Marketing Digital | Agência 2026</title>
+
+  <meta name="description" content="Mido Marketing Digital. Criamos marcas desejadas nas redes sociais com estratégia, conteúdo e vídeo." />
+
+  <!-- GOOGLE FONT 2026 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, rgba(14,165,165,0.18), transparent 55%),
+                  linear-gradient(180deg, #020617, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ANIMAÇÃO */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.9s ease;
+    }
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HEADER */
+    header {
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-wrapper {
+      position: relative;
+      padding: 72px 64px;
+      margin-bottom: 64px;
+      border-radius: 46px;
+      background:
+        linear-gradient(180deg, rgba(2,6,23,0.92), rgba(2,6,23,0.78));
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow:
+        inset 0 0 60px rgba(255,255,255,0.06),
+        0 70px 140px rgba(0,0,0,0.65);
+    }
+
+    .logo-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      background: linear-gradient(135deg,
+        rgba(103,232,249,0.55),
+        rgba(45,212,191,0.35),
+        rgba(103,232,249,0.55));
+      opacity: 0.55;
+      filter: blur(22px);
+      z-index: -1;
+    }
+
+    .logo {
+      width: 680px;
+      max-width: 85vw;
+      filter:
+        drop-shadow(0 18px 40px rgba(0,0,0,0.25))
+        drop-shadow(0 0 120px rgba(103,232,249,0.75));
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+      50% { transform: translateY(-14px); }
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      max-width: 620px;
+      font-size: 1.15rem;
+      color: #cbd5f5;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #06b6d4, #0ea5a5);
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 6px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+      transform: translateX(-100%);
+      transition: 0.6s;
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    /* SEÇÕES */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    section > p {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+      font-weight: 300;
+      color: #cbd5f5;
+      font-size: 1.05rem;
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 26px;
+      padding: 42px 34px;
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-14px) scale(1.03);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.45);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      color: #67e8f9;
+    }
+
+    .card p {
+      font-weight: 300;
+      color: #e5e7eb;
+    }
+
+    /* CTA FINAL */
+    .cta {
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at center, rgba(14,165,165,0.25), transparent 60%);
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="fade">
+    <div class="logo-wrapper">
+      <img src="logo-mido.png" alt="Mido Marketing Digital" class="logo" loading="lazy" />
+    </div>
+    <h1>Marcas que dominam o digital</h1>
+    <p>Criamos presença, desejo e conversão nas redes sociais.</p>
+    <a href="https://wa.me/5511962256902" class="btn">Quero um orçamento</a>
+    <a href="https://www.instagram.com/midomktdigital/" target="_blank" class="btn">Instagram</a>
+  </header>
+
+  <section class="fade">
+    <h2>O que fazemos</h2>
+    <p>Não é sobre postar. É sobre posicionar sua marca onde a atenção está.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Social Media Estratégico</h3>
+        <p>Conteúdo pensado para crescimento real, não só likes.</p>
+      </div>
+      <div class="card">
+        <h3>Conteúdo Visual Premium</h3>
+        <p>Design e identidade que fazem sua marca ser lembrada.</p>
+      </div>
+      <div class="card">
+        <h3>Vídeos para Reels & TikTok</h3>
+        <p>Vídeos rápidos, atuais e feitos para performar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta fade">
+    <h2>Vamos construir sua presença digital?</h2>
+    <a href="https://wa.me/5511962256902" class="btn">Falar com a Mido</a>
+  </section>
+
+  <footer>
+    © 2026 Mido Marketing Digital. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.fade');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.15 });
+
+    items.forEach(item => observer.observe(item));
+  </script>
+
+</body>
+</html>
