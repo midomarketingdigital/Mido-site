@@ -1,274 +1,232 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mido Marketing Digital | Agência 2026</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Mido Marketing Digital. Criamos marcas desejadas nas redes sociais com estratégia, conteúdo e vídeo." />
+    <!-- SEO -->
+    <title>Mido Marketing Digital | Gestão de Redes Sociais e Conteúdo</title>
+    <meta name="description" content="Agência de Marketing Digital especializada em gestão de redes sociais, criação de posts, vídeos para Instagram e TikTok. Fale com a Mido pelo WhatsApp.">
+    <meta name="keywords" content="marketing digital, redes sociais, instagram, tiktok, gestão de redes, social media, agência de marketing">
+    <meta name="author" content="Mido Marketing Digital">
 
-  <!-- GOOGLE FONT 2026 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph (preview bonito ao compartilhar) -->
+    <meta property="og:title" content="Mido Marketing Digital">
+    <meta property="og:description" content="Transformamos redes sociais em resultados reais.">
+    <meta property="og:image" content="logo-mido.png">
+    <meta property="og:type" content="website">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Manrope', sans-serif;
-    }
+    <!-- FAVICON -->
+    <link rel="icon" href="logo-mido.png">
 
-    body {
-      background: radial-gradient(circle at top, rgba(14,165,165,0.18), transparent 55%),
-                  linear-gradient(180deg, #020617, #0f172a);
-      color: #e5e7eb;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    /* ANIMAÇÃO */
-    .fade {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.9s ease;
-    }
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    /* HEADER */
-    header {
-      min-height: 100vh;
-      padding: 120px 20px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+        body {
+            background-color: #f4f6f8;
+            color: #1f2933;
+            line-height: 1.6;
+        }
 
-    .logo-wrapper {
-      position: relative;
-      padding: 72px 64px;
-      margin-bottom: 64px;
-      border-radius: 46px;
-      background:
-        linear-gradient(180deg, rgba(2,6,23,0.92), rgba(2,6,23,0.78));
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow:
-        inset 0 0 60px rgba(255,255,255,0.06),
-        0 70px 140px rgba(0,0,0,0.65);
-    }
+        /* ANIMAÇÃO */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s;
+        }
 
-    .logo-wrapper::before {
-      content: "";
-      position: absolute;
-      inset: -2px;
-      border-radius: inherit;
-      background: linear-gradient(135deg,
-        rgba(103,232,249,0.55),
-        rgba(45,212,191,0.35),
-        rgba(103,232,249,0.55));
-      opacity: 0.55;
-      filter: blur(22px);
-      z-index: -1;
-    }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .logo {
-      width: 680px;
-      max-width: 85vw;
-      filter:
-        drop-shadow(0 18px 40px rgba(0,0,0,0.25))
-        drop-shadow(0 0 120px rgba(103,232,249,0.75));
-    }
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0f172a, #0ea5a5);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-      50% { transform: translateY(-14px); }
-    }
+        /* LOGO COM SOMBRA BRANCA */
+        .logo {
+            width: 300px;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 0 25px rgba(255,255,255,0.9));
+        }
 
-    header h1 {
-      font-size: clamp(2.2rem, 4vw, 3.6rem);
-      font-weight: 700;
-      margin-bottom: 18px;
-      letter-spacing: -1px;
-    }
+        header h1 {
+            font-size: 2.7rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
 
-    header p {
-      max-width: 620px;
-      font-size: 1.15rem;
-      color: #cbd5f5;
-      margin-bottom: 40px;
-      font-weight: 300;
-    }
+        header p {
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 16px 36px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #06b6d4, #0ea5a5);
-      color: #020617;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 6px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
+        .btn {
+            background: #0ea5a5;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+            transition: .3s;
+        }
 
-    .btn:hover {
-      transform: translateY(-4px);
-    }
+        .btn:hover {
+            transform: translateY(-4px);
+            background: #0891b2;
+        }
 
-    .btn::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-      transform: translateX(-100%);
-      transition: 0.6s;
-    }
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-    .btn:hover::after {
-      transform: translateX(100%);
-    }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
 
-    /* SEÇÕES */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 100px 20px;
-    }
+        .services, .benefits {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
 
-    section h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 30px;
-    }
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.06);
+            transition: .3s;
+            text-align: center;
+        }
 
-    section > p {
-      max-width: 720px;
-      margin: auto;
-      text-align: center;
-      font-weight: 300;
-      color: #cbd5f5;
-      font-size: 1.05rem;
-    }
+        .card:hover {
+            transform: translateY(-10px);
+        }
 
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 60px;
-    }
+        .cta {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
 
-    .card {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 26px;
-      padding: 42px 34px;
-      text-align: center;
-      transition: all 0.35s ease;
-    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #cbd5e1;
+        }
 
-    .card:hover {
-      transform: translateY(-14px) scale(1.03);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.45);
-    }
+        /* BOTÃO FLUTUANTE WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,.3);
+            animation: pulse 2s infinite;
+            z-index: 999;
+        }
 
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 14px;
-      color: #67e8f9;
-    }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+            70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
 
-    .card p {
-      font-weight: 300;
-      color: #e5e7eb;
-    }
-
-    /* CTA FINAL */
-    .cta {
-      text-align: center;
-      padding: 120px 20px;
-      background: radial-gradient(circle at center, rgba(14,165,165,0.25), transparent 60%);
-    }
-
-    footer {
-      text-align: center;
-      padding: 26px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding-top: 90px;
-      }
-    }
-  </style>
+        @media(max-width:600px){
+            .logo { width: 210px; }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header class="fade">
-    <div class="logo-wrapper">
-      <img src="logo-mido.png" alt="Mido Marketing Digital" class="logo" loading="lazy" />
-    </div>
-    <h1>Marcas que dominam o digital</h1>
-    <p>Criamos presença, desejo e conversão nas redes sociais.</p>
-    <a href="https://wa.me/5511962256902" class="btn">Quero um orçamento</a>
+<header class="fade-in">
+    <img src="logo-mido.png" class="logo" alt="Mido Marketing Digital">
+
+    <h1>Marketing Digital que faz sua marca crescer</h1>
+    <p>Gestão de redes sociais, criação de conteúdo e vídeos estratégicos para Instagram e TikTok.</p>
+
+    <a href="https://wa.me/5511962256902" class="btn">Falar no WhatsApp</a>
     <a href="https://www.instagram.com/midomktdigital/" target="_blank" class="btn">Instagram</a>
-  </header>
+</header>
 
-  <section class="fade">
-    <h2>O que fazemos</h2>
-    <p>Não é sobre postar. É sobre posicionar sua marca onde a atenção está.</p>
+<section class="fade-in">
+    <h2>Quem somos</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;">
+        Somos a Mido Marketing Digital. Transformamos redes sociais em resultados reais com estratégia, criatividade e performance.
+    </p>
+</section>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Social Media Estratégico</h3>
-        <p>Conteúdo pensado para crescimento real, não só likes.</p>
-      </div>
-      <div class="card">
-        <h3>Conteúdo Visual Premium</h3>
-        <p>Design e identidade que fazem sua marca ser lembrada.</p>
-      </div>
-      <div class="card">
-        <h3>Vídeos para Reels & TikTok</h3>
-        <p>Vídeos rápidos, atuais e feitos para performar.</p>
-      </div>
+<section class="fade-in">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+        <div class="card">📱 Gestão de Redes Sociais</div>
+        <div class="card">🎨 Criação de Posts</div>
+        <div class="card">🎥 Edição de Vídeos</div>
     </div>
-  </section>
+</section>
 
-  <section class="cta fade">
-    <h2>Vamos construir sua presença digital?</h2>
-    <a href="https://wa.me/5511962256902" class="btn">Falar com a Mido</a>
-  </section>
+<section class="fade-in">
+    <h2>Por que escolher a Mido?</h2>
+    <div class="benefits">
+        <div class="card">🚀 Estratégia personalizada</div>
+        <div class="card">🎯 Foco em resultados</div>
+        <div class="card">📈 Conteúdo profissional</div>
+        <div class="card">💡 Linguagem atual</div>
+    </div>
+</section>
 
-  <footer>
-    © 2026 Mido Marketing Digital. Todos os direitos reservados.
-  </footer>
+<div class="cta fade-in">
+    <h2>Pronto para crescer nas redes?</h2>
+    <a href="https://wa.me/5511962256902" class="btn">Chamar no WhatsApp</a>
+</div>
 
-  <script>
-    const items = document.querySelectorAll('.fade');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.15 });
+<footer>
+    © 2026 Mido Marketing Digital
+</footer>
 
-    items.forEach(item => observer.observe(item));
-  </script>
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511962256902" class="whatsapp-float">💬</a>
+
+<script>
+const elements = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('show');
+    });
+});
+elements.forEach(el=>obs.observe(el));
+</script>
 
 </body>
 </html>
